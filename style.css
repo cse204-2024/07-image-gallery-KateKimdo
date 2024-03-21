@@ -37,7 +37,8 @@ h1 {
 
 .image-box:hover {
     cursor: pointer;
-    box-shadow: 0 0 10px #02223960;
+    box-shadow: 0 0 40px #02223960;
+    transform: scale(1.07);
 }
 
 #largeImageView {
@@ -46,7 +47,7 @@ h1 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(10, 101, 150, 0.75);
+    background-color: rgba(7, 56, 82, 0.75);
     display: none;
     align-items: center;
     justify-content: center;
@@ -58,14 +59,20 @@ h1 {
     max-height: 80%;
 }
 
+#close {
+    right: 20px;
+    top: 20px;
+}
+
 #close, #previous, #next {
     position: fixed;
     top: 20px;
-    color: #fff;
-    background-color: #333;
-    padding: 5px 10px;
+    color: black;
+    background-color: white;
+    padding: 5px 30px;
     cursor: pointer;
     z-index: 1001;
+    border-radius: 15px;
 }
 
 #close {
@@ -77,5 +84,5 @@ h1 {
 }
 
 #next {
-    left: 80px;
+    left: 130px;
 }
