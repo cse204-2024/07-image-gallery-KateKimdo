@@ -9,6 +9,13 @@ body {
 h1 {
     text-align: center;
     margin-top: 80px;
+    color: rgb(224, 203, 68);
+}
+
+p{
+    font-family: Arial, sans-serif;
+    font-size: 1.2rem;
+    text-align: center;
     color: white;
 }
 
@@ -27,6 +34,7 @@ h1 {
     width: 300px; 
     height: 200px;
     overflow: hidden;
+    border: 4px solid rgb(224, 203, 68);
 }
 
 .image-box img {
@@ -60,29 +68,120 @@ h1 {
 }
 
 #close {
-    right: 20px;
-    top: 20px;
-}
-
-#close, #previous, #next {
     position: fixed;
-    top: 20px;
+    right: 20px; 
+    top: 40px; 
     color: black;
     background-color: white;
-    padding: 5px 30px;
+    padding: 5px 20px;
     cursor: pointer;
     z-index: 1001;
     border-radius: 15px;
+    font-family: Arial, sans-serif;
 }
 
+#previous, #next {
+    position: fixed;
+    top: auto;
+    bottom: 40px;
+    color: black;
+    background-color: white;
+    padding: 5px 20px;
+    cursor: pointer;
+    z-index: 1001;
+    border-radius: 15px;
+    font-family: Arial, sans-serif;
+}
+
+#close:hover, #previous:hover, #next:hover {
+    background-color: rgba(97, 192, 243, 0.75);
+    color: white;
+}
+
+
 #close {
-    right: 20px;
+    right: 10%;
+}
+
+#previous, #next {
+    transform: translateX(-50%);
 }
 
 #previous {
-    left: 20px;
+    left: 45%;
 }
 
 #next {
-    left: 130px;
+    left: 55%;
+}
+
+@media (max-width: 768px) {
+    #images {
+        gap: 10px;
+        padding: 35px;
+    }
+
+    .image-box {
+        width: 48%; 
+        height: auto;
+    }
+
+    .image-box img {
+        height: 100%;
+    }
+
+    #close, #previous, #next {
+        padding: 5px 20px;
+    }
+
+    #previous, #next {
+        bottom: 10px;
+        top: auto;
+    }
+
+    #previous {
+        left: 30%;
+    }
+
+    #next {
+        left: 70%;
+    }
+
+    #close {
+        top: 10px;
+        right: 5%;
+    }
+    h1{
+        font-size: 1.3rem;
+    }
+    
+    p{
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #images {
+        padding: 20px;
+    }
+
+    .image-box {
+        width: 100%;
+    }
+
+    #previous {
+        left: 20%;
+    }
+
+    #next {
+        left: 80%;
+    }
+
+    h1{
+        font-size: 1.3rem;
+    }
+
+    p{
+        font-size: 0.8rem;
+    }
 }
